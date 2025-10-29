@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pokédex Avanzada - Información de todos los Pokémon</title>
+<meta name="description" content="Explora todos los Pokémon en nuestra Pokédex avanzada. Filtra por tipo, peso o nombre. Encuentra estadísticas, imágenes y tipos de cada Pokémon.">
+<meta name="keywords" content="Pokédex, Pokémon, tipos de Pokémon, estadísticas Pokémon, peso Pokémon, altura Pokémon, Pokémon fuego, Pokémon agua, Pokémon planta">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+<header>
+  <h1>Pokédex Avanzada</h1>
+</header>
+
+<main>
+  <section id="intro">
+    <p>Bienvenido a la Pokédex avanzada. Explora todos los Pokémon, conoce sus tipos, estadísticas, peso, altura y habilidades especiales. Filtra los Pokémon por tipo como fuego, agua o planta y encuentra tus favoritos.</p>
+  </section>
+
+  <section id="filters">
+    <input type="text" id="search" placeholder="Buscar por nombre">
+    <select id="type-filter">
+      <option value="">Todos los tipos</option>
+    </select>
+    <input type="number" id="max-weight" placeholder="Peso máximo (kg)" min="1">
+  </section>
+
+  <section id="pokedex" aria-label="Lista de Pokémon">
+    <!-- Pokémon cards serán insertadas aquí -->
+  </section>
+
+  <button id="load-more">Cargar más Pokémon</button>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
