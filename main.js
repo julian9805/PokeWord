@@ -37,12 +37,13 @@ async function loadPokemonBatch() {
   displayPokemon();
 }
 
-// Mostrar Pokémon filtrando por nombre, tipo y peso
 function displayPokemon() {
   pokedex.innerHTML = '';
   const nameTerm = searchInput.value.toLowerCase();
   const typeTerm = typeFilter.value;
   const weightTerm = weightFilter.value ? parseFloat(weightFilter.value) : Infinity;
+
+  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
   allPokemon.forEach(pokemon => {
     const types = pokemon.types.map(t => t.type.name);
@@ -55,6 +56,9 @@ function displayPokemon() {
     if (matchesName && matchesType && matchesWeight) {
       const card = document.createElement('article');
       card.classList.add('pokemon-card');
+
+      const isFav = favoritos.includes(pokemon.id);
+
       card.innerHTML = `
         <h2>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
         <img loading="lazy" src="${pokemon.sprites.front_default}" alt="Imagen del Pokémon ${pokemon.name}, tipo ${types.join(', ')}">
@@ -63,11 +67,35 @@ function displayPokemon() {
         </div>
         <p>Peso: ${weight} kg</p>
         <p>Altura: ${pokemon.height / 10} m</p>
+        <button class="fav-btn" data-id="${pokemon.id}">
+          ${isFav ? '💖 Quitar' : '🤍 Favorito'} 
+        </button>
       `;
+
       pokedex.appendChild(card);
     }
   });
+
+  // Agregar eventos a los botones de favorito
+  document.querySelectorAll('.fav-btn').forEach(btn => {
+    btn.addEventListener('click', toggleFavorito);
+  });
 }
+
+function toggleFavorito(e) {
+  const id = parseInt(e.target.dataset.id);
+  let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+  if (favoritos.includes(id)) {
+    favoritos = favoritos.filter(favId => favId !== id);
+  } else {
+    favoritos.push(id);
+  }
+
+  localStorage.setItem('favoritos', JSON.stringify(favoritos));
+  displayPokemon(); // Actualiza los botones
+}
+
 
 // Event listeners
 searchInput.addEventListener('input', displayPokemon);

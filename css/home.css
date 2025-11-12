@@ -1,0 +1,121 @@
+/* ====== ESTILOS GENERALES ====== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fceabb 0%, #f8b500 100%);
+  color: #2a2a2a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header {
+  background-color: #ef5350;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  width: 40px;
+  height: 40px;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav p a:hover {
+  text-decoration: underline;
+}
+
+/* ====== SECCIÓN INTRO ====== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+#intro {
+  margin-top: 2rem;
+}
+
+#intro h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+#intro p {
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* ====== BOTÓN ====== */
+button {
+  background-color: #ffcb05;
+  color: #2a75bb;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #2a75bb;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== IMAGEN POKÉMON / LOGO ====== */
+main section img {
+  width: 250px;
+  margin-top: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
