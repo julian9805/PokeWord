@@ -208,4 +208,18 @@ button:active {
   transform: scale(1.05);
 }
 
+.favoritos{
+   font-family: 'Press Start 2P', cursive;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#intro h1{
+   font-family: 'Press Start 2P', cursive;
+  color: #d32f2f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foro</title>
+    <link rel="icon" href="../assets/pokeball.png" type="image/png">
+    <meta name="description"
+        content="Participa en el foro de PokeWorld. Comparte estrategias, intercambia Pokémon y habla con otros entrenadores.">
+    <link rel="stylesheet" href="../css/foro.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">
+            <img class="logo" src="../assets/pokeball.png" alt="Logo PokeWorld">
+        </a>
+        
+        <nav>
+            <p><a href="./index.html">Inicio</a></p>
+            <p><a href="./pokedex.html">Pokedex</a></p>
+            <p><a href="./favoritos.html">Favoritos</a></p>
+            <p><a href="./foro.html">Foro</a></p>
+        </nav>
+    </header>
+
+    <main>
+        <section id="foro-intro">
+            <h1>Foro PokeWorld</h1>
+            <p>Únete a la conversación, comparte tus estrategias y descubre tips de otros entrenadores.</p>
+        </section>
+
+        <section id="temas-foro">
+            <h2>Temas recientes</h2>
+            <div class="tema">
+                <p class="titulo">Mejores Pokémon para gimnasio</p>
+                <p class="info">• 12 respuestas</p>
+            </div>
+            <div class="tema">
+                <p class="titulo">Pokemon mas fuerte</p>
+                <p class="info">• 8 respuestas</p>
+            </div>
+            <div class="tema">
+                <p class="titulo">Cuantos pokemon tipo electrico hay?</p>
+                <p class="info">• 15 respuestas</p>
+            </div>
+        </section>
+
+        <section id="nuevo-tema">
+            <h2>Crear nuevo tema</h2>
+            <form>
+                <input type="text" placeholder="Título del tema" required>
+                <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../foro.js"></script>
+</body>
+
+</html>
