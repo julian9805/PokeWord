@@ -119,3 +119,66 @@ main section img {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  header nav {
+    gap: 0.8rem;
+  }
+
+  header .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  #intro h1 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  #intro p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  main section img {
+    width: 180px;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos bajos) */
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+
+  #intro h1 {
+    font-size: 0.9rem;
+  }
+
+  main section img {
+    width: 150px;
+  }
+
+  button {
+    font-size: 0.85rem;
+  }
+}
+
