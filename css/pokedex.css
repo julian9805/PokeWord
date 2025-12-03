@@ -68,6 +68,13 @@ main {
   max-width: 600px;
 }
 
+#intro h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: #d32f2f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 #intro p {
   font-size: 1rem;
   line-height: 1.6;
@@ -102,7 +109,7 @@ main {
 /* ====== LISTA DE POKÉMON ====== */
 #pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
   width: 90%;
   max-width: 1000px;
@@ -175,27 +182,11 @@ button:active {
   50% { transform: translateY(-10px); }
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 0.8rem;
-  }
-
-  #filters {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pokemon-card {
-    padding: 0.8rem;
-  }
-}
-
 /* ====== BOTÓN DE FAVORITOS ====== */
 .fav-btn {
   border-radius: 20px;
-  padding: 0.8rem 2rem; /* 🔹 más pequeño que el botón general */
-  font-size: 0.85rem; /* 🔹 texto más chico */
+  padding: 0.8rem 2rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: 0.5rem;
@@ -208,18 +199,73 @@ button:active {
   transform: scale(1.05);
 }
 
-.favoritos{
-   font-family: 'Press Start 2P', cursive;
+.favoritos {
+  font-family: 'Press Start 2P', cursive;
   color: #d32f2f;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-#intro h1{
-   font-family: 'Press Start 2P', cursive;
-  color: #d32f2f;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* ====== RESPONSIVE POKEDEX ====== */
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  header nav {
+    gap: 0.8rem;
+  }
+
+  header .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  #intro h1 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  #intro p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  main section img {
+    width: 180px;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
+/* Para pantallas muy pequeñas (teléfonos bajos) */
+@media (max-width: 480px) {
 
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+
+  #intro h1 {
+    font-size: 0.9rem;
+  }
+
+  main section img {
+    width: 150px;
+  }
+
+  button {
+    font-size: 0.85rem;
+  }
+}
