@@ -102,7 +102,6 @@ main {
 }
 
 .tema:hover {
-  background-color: #2a75bb;
   color: white;
   transform: scale(1.02);
 }
@@ -166,3 +165,52 @@ form button:hover {
   color: #fff;
   transform: scale(1.05);
 }
+
+/* ====== RESPUESTAS ====== */
+.tema .respuestas {
+    margin-top: 0.8rem;
+    padding-left: 1rem;
+     background-color: #ffcb05;
+    border-radius: 10px;
+    list-style-type: none;
+    color: #2a2a2a;
+    font-size: 0.85rem;
+}
+
+.tema .respuestas li {
+    margin-bottom: 0.5rem;
+}
+
+.nueva-respuesta-form {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nueva-respuesta-form input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.85rem;
+}
+
+.nueva-respuesta-form button {
+    background-color: #2a75bb;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.nueva-respuesta-form button:hover {
+    background-color: #1b4f8b;
+}
+
+
+
+
+
