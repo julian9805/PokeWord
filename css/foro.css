@@ -210,6 +210,47 @@ form button:hover {
     background-color: #1b4f8b;
 }
 
+.corazon {
+    opacity: 0.3;            /* Más “apagado” cuando no hay like */
+    cursor: pointer;
+    transition: 0.3s;        /* Transición suave al cambiar de color */
+    font-size: 1.2rem;       /* Ajustable, se ve más visible */
+    color: #d32f2f;          /* Color rojo base */
+    margin-right: 0.3rem;    /* Separación del número de likes */
+}
+
+.corazon.like-hecho {
+    opacity: 1;              /* Se ilumina al darle like */
+    transform: scale(1.2);   /* Animación sutil de “pop” */
+}
+
+.corazon:hover {
+    opacity: 0.6; /* Da feedback visual aunque no haya like */
+    transform: scale(1.1);
+}
+
+.num-likes {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.like-container {
+  display: flex;
+    align-items: center;
+    gap: 0.2rem; /* espacio entre corazón y número */
+}
+
+.respuesta-item {
+    display: flex;
+    justify-content: space-between; /* texto a la izquierda, likes a la derecha */
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    background-color: #ffcb05;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+
 
 
 
