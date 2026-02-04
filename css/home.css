@@ -69,7 +69,6 @@ main {
 
 #intro h1 {
   font-family: 'Press Start 2P', cursive;
-  color: #d32f2f;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   line-height: 2rem;
@@ -84,21 +83,23 @@ main {
 
 /* ====== BOTÓN ====== */
 button {
-  background-color: #ffcb05;
-  color: #2a75bb;
+  background-color: #fac800;
+  color: #0b3e65;
   border: none;
   border-radius: 30px;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-top: 2rem;
   transition: 0.3s;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 48px;
+  min-height: 48px;
 }
 
 button:hover {
-  background-color: #2a75bb;
+  background-color:#0b3e65;
   color: #fff;
   transform: scale(1.05);
 }
