@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pokémon | PokeWord</title>
+    <link rel="icon" href="../assets/pokeball.png" type="image/png">
+    <meta name="description"
+        content="Pon a prueba tus conocimientos Pokémon con el quiz interactivo de PokeWorld. ¿Cuánto sabes sobre tipos, evoluciones y estadísticas?">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html" aria-label="Ir al inicio">
+            <img class="logo" src="../assets/pokeball.png" alt="Logo PokeWorld">
+        </a>
+
+        <nav>
+            <p><a href="./index.html">Inicio</a></p>
+            <p><a href="./pokedex.html">Pokedex</a></p>
+            <p><a href="./favoritos.html">Favoritos</a></p>
+            <p><a href="./foro.html">Foro</a></p>
+            <p><a href="./quiz.html">Quiz</a></p>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- FORMULARIO DE NOMBRE -->
+        <section id="quiz-start">
+            <h2>¡Bienvenido al Quiz Pokémon!</h2>
+            <p>Introduce tu nombre para comenzar:</p>
+            <form id="start-form">
+                <input type="text" id="username-input" placeholder="Tu nombre" required>
+                <button type="submit">Comenzar</button>
+            </form>
+        </section>
+
+        <!-- Contenedor del Quiz (oculto hasta poner nombre) -->
+        <section id="quiz-container" style="display:none;">
+            <h2 id="question">Aquí aparecerá la pregunta</h2>
+
+            <div id="answers">
+                <!-- Las respuestas se generarán con JavaScript -->
+            </div>
+
+            <button id="next-btn" style="display:none;">Siguiente</button>
+
+            <p id="progress"></p>
+            <p id="score"></p>
+        </section>
+
+        <!-- Sección de ranking opcional -->
+        <section id="quiz-ranking">
+            <h2>Mejores puntuaciones</h2>
+            <ul id="ranking-list">
+                <!-- Se rellena con JS usando localStorage -->
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/quiz.js"></script>
+</body>
+
+</html>
