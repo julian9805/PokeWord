@@ -1,276 +1,246 @@
-/* ====== ESTILOS GENERALES ====== */
+/* ====== ESTILOS GENERALES (UNIFICADOS) ====== */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #fceabb 0%, #f8b500 100%);
-  color: #2a2a2a;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 50% 50%, #fceabb 0%, #f8b500 100%);
+    background-attachment: fixed;
+    color: #2a2a2a;
+    min-height: 100vh;
 }
 
-/* ====== HEADER / NAVBAR ====== */
+/* ====== HEADER / NAVBAR (IGUAL AL HOME) ====== */
 header {
-  background-color: #b00f0c;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 2rem;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    background-color: #b00f0c;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 4px solid #2a2a2a;
 }
 
 header .logo {
-  width: 40px;
-  height: 40px;
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
 }
 
 header nav {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-header nav p a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-header nav p a:hover {
-  text-decoration: underline;
+header nav a:hover {
+    color: #fac800;
+}
+
+/* Menú Hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 110;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 /* ====== SECCIÓN INTRO ====== */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  width: 100%;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-#intro {
-  margin: 2rem 0 1rem;
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
 #intro h1 {
-  font-family: 'Press Start 2P', cursive;
-  color: #d32f2f;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #2a75bb;
+    text-shadow: 3px 3px 0px #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.1));
 }
 
 #intro p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
+    font-weight: 500;
 }
 
-/* ====== FILTROS ====== */
+/* ====== FILTROS (ESTILO PIXEL) ====== */
 #filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
 }
 
-#filters input,
-#filters select {
-  padding: 0.8rem 1rem;
-  border: 2px solid #2a75bb;
-  border-radius: 25px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
+#filters input, #filters select {
+    padding: 0.8rem 1.2rem;
+    border: 3px solid #2a2a2a;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    box-shadow: 4px 4px 0px #2a2a2a;
+    outline: none;
 }
 
-#filters input:focus,
-#filters select:focus {
-  border-color: #ef5350;
-  box-shadow: 0 0 8px rgba(239, 83, 80, 0.5);
+#filters input:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2a2a2a;
 }
 
-/* ====== LISTA DE POKÉMON ====== */
+/* ====== POKEDEX GRID ====== */
 #pokedex {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1000px;
-  padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    width: 95%;
+    max-width: 1200px;
+    padding: 2rem 0;
 }
 
-/* ====== TARJETA DE POKÉMON ====== */
+/* ====== TARJETA DE POKÉMON (ESTILO HOME) ====== */
 .pokemon-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-align: center;
-}
-
-.pokemon-card h2 {
-  word-wrap: break-word;   /* Rompe palabras largas */
-  overflow-wrap: break-word;
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 4px solid #2a2a2a;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .pokemon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+}
+
+.pokemon-card .img-container {
+    background: #f0f0f0;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 2px solid #eee;
 }
 
 .pokemon-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-  animation: float 3s ease-in-out infinite;
+    width: 120px;
+    animation: float 3s ease-in-out infinite;
 }
 
 .pokemon-card h3 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
-  color: #d32f2f;
-  margin-bottom: 0.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #2a2a2a;
+    margin: 1rem 0;
+    text-transform: uppercase;
 }
 
-.pokemon-card p {
-  font-size: 0.9rem;
-  color: #444;
+.type-badge {
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    border: 2px solid rgba(0,0,0,0.2);
 }
 
-/* ====== BOTÓN ====== */
-button {
-  background-color: #fac800;
-  color: #0b3e65;
-  border: none;
-  border-radius: 30px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 2rem 0;
-  transition: 0.3s;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+/* ====== BOTONES (ESTILO CTA DEL HOME) ====== */
+#load-more, .fav-btn {
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid #2a2a2a;
+    box-shadow: 4px 4px 0px #2a2a2a;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
 }
 
-button:hover {
-  background-color:#0b3e65;
-  color: #fff;
-  transform: scale(1.05);
+#load-more {
+    background-color: #b00f0c;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    margin: 3rem auto;
+    display: block;
 }
 
-button:active {
-  transform: scale(0.98);
-}
-
-/* ====== ANIMACIONES ====== */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* ====== BOTÓN DE FAVORITOS ====== */
 .fav-btn {
-  border-radius: 20px;
-  padding: 0.8rem 2rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  transition: 0.3s;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 0.6rem;
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
-.fav-btn:hover {
-  background-color: #d32f2f;
-  color: #fff;
-  transform: scale(1.05);
+#load-more:hover, .fav-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2a2a2a;
 }
 
-.favoritos {
-  font-family: 'Press Start 2P', cursive;
-  color: #d32f2f;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+#load-more:active, .fav-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #2a2a2a;
 }
 
-/* ====== RESPONSIVE POKEDEX ====== */
-
-/* ====== RESPONSIVE ====== */
+/* ====== RESPONSIVE (MENÚ HAMBURGUESA) ====== */
 @media (max-width: 768px) {
+    .menu-toggle { display: flex; }
 
-  header {
-    padding: 0.8rem 1rem;
-  }
+    header nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #b00f0c;
+        width: 280px;
+        height: 100vh;
+        justify-content: center;
+        transition: 0.4s ease;
+        border-left: 5px solid #2a2a2a;
+    }
 
-  header nav {
-    gap: 0.8rem;
-  }
-
-  header .logo {
-    width: 35px;
-    height: 35px;
-  }
-
-  #intro h1 {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-
-  #intro p {
-    font-size: 0.9rem;
-    max-width: 90%;
-  }
-
-  main section img {
-    width: 180px;
-  }
-
-  button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
+    header nav.active { right: 0; }
+    
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 }
 
-/* Para pantallas muy pequeñas (teléfonos bajos) */
-@media (max-width: 480px) {
-
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  header nav {
-    gap: 1rem;
-  }
-
-  #intro h1 {
-    font-size: 0.9rem;
-  }
-
-  main section img {
-    width: 150px;
-  }
-
-  button {
-    font-size: 0.85rem;
-  }
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }

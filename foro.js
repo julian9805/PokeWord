@@ -199,3 +199,31 @@ temas.forEach(tema => {
         tema.classList.add("activo");
     });
 });
+
+/* ====== LÓGICA DEL MENÚ (Funciona en todas las páginas) ====== */
+function inicializarMenu() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('header nav'); // Usamos el selector de etiqueta si no tienes ID
+
+    if (menuToggle && navMenu) {
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        };
+
+        const links = navMenu.querySelectorAll('a');
+        links.forEach(link => {
+            link.onclick = () => {
+                menuToggle.classList.remove('is-active');
+                navMenu.classList.remove('active');
+            };
+        });
+    }
+}
+
+// Inicializar menú siempre
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inicializarMenu);
+} else {
+    inicializarMenu();
+}

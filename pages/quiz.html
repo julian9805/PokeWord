@@ -18,6 +18,12 @@
             <img class="logo" src="../assets/pokeball.png" alt="Logo PokeWorld">
         </a>
 
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <nav>
             <p><a href="./index.html">Inicio</a></p>
             <p><a href="./pokedex.html">Pokedex</a></p>
@@ -40,18 +46,15 @@
         </section>
 
         <!-- Contenedor del Quiz (oculto hasta poner nombre) -->
-        <section id="quiz-container" style="display:none;">
-            <h2 id="question">Aquí aparecerá la pregunta</h2>
-
-            <div id="answers">
-                <!-- Las respuestas se generarán con JavaScript -->
-            </div>
-
-            <button id="next-btn" style="display:none;">Siguiente</button>
-
-            <p id="progress"></p>
-            <p id="score"></p>
-        </section>
+        <div id="quiz-container" style="display: none;">
+    <div id="timer-container">
+        <div id="timer-bar"></div>
+    </div>
+    <p id="progress"></p>
+    <h2 id="question">Pregunta aquí</h2>
+    <div id="answers"></div>
+    <button id="next-btn" style="display: none;">Siguiente</button>
+</div>
 
         <!-- Sección de ranking opcional -->
         <section id="quiz-ranking">
@@ -63,7 +66,7 @@
 
     </main>
 
-    <script src="/quiz.js"></script>
+    <script src="../quiz.js"></script>
 </body>
 
 </html>
