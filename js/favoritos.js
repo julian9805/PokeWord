@@ -23,7 +23,7 @@ async function loadFavoritos() {
     card.classList.add('pokemon-card');
     card.innerHTML = `
       <h2>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
-      <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+      <img src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}">
       <div class="pokemon-types">
         ${types.map(t => `<span class="type ${t}">${t}</span>`).join('')}
       </div>
