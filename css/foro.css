@@ -46,6 +46,8 @@ header nav a {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 0.65rem;
     font-size: 0.9rem;
     text-transform: uppercase;
     transition: 0.3s;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeWord - Consulta a Oak</title>
+    <link rel="icon" href="../assets/pokeball.png" type="image/png">
+    <link rel="stylesheet" href="../css/home.css"> <link rel="stylesheet" href="../css/oak.css">  
+</head>
+<body>
+
+    <header>
+        <a href="./index.html" aria-label="Ir al inicio">
+            <img class="logo" src="../assets/pokeball.png" alt="Logo">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./pokedex.html">Pokedex</a>
+            <a href="./favoritos.html">Favoritos</a>
+            <a href="./foro.html">Foro</a>
+            <a href="./quiz.html">Quiz</a>
+            <a href="./oak.html" class="active">Consulta IA</a>
+        </nav>
+    </header>
+
+    <main id="oak-lab">
+        <section class="chat-container">
+            <div class="oak-header">
+                <img src="https://images.wikidexcdn.net/mwuploads/wikidex/c/cc/latest/20230611190416/Profesor_Oak_EP.png" alt="Profesor Oak" class="oak-avatar">
+                <div class="oak-title">
+                    <h2 class="pixel-text">LABORATORIO OAK</h2>
+                    <p>SISTEMA DE CONSULTA INTELIGENTE v1.0</p>
+                </div>
+            </div>
+
+            <div id="chat-box" class="terminal-screen">
+                <div class="msg oak-msg">
+                    <span class="label">OAK:</span> ¡Hola, entrenador! He configurado esta IA con toda mi base de datos. ¿En qué puedo ayudarte hoy?
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Escribe tu duda aquí..." autofocus>
+                <button id="send-btn">
+                    <span>ENVIAR</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/oak.js"></script> </body>
+</html>

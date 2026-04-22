@@ -1,0 +1,124 @@
+#oak-lab {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 700px;
+    background: #2a2a2a; /* Fondo oscuro tipo consola */
+    border: 6px solid #b00f0c;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.oak-header {
+    background: #b00f0c;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 4px solid #2a2a2a;
+}
+
+.oak-avatar {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid #2a2a2a;
+}
+
+.oak-title h2 {
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.oak-title p {
+    font-size: 0.6rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fac800;
+}
+
+/* Pantalla estilo Terminal */
+.terminal-screen {
+    height: 350px;
+    background: #1a1a1a;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Scrollbar estilo retro */
+.terminal-screen::-webkit-scrollbar { width: 8px; }
+.terminal-screen::-webkit-scrollbar-thumb { background: #b00f0c; }
+
+.msg {
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-width: 85%;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.oak-msg {
+    align-self: flex-start;
+    background: #2a2a2a;
+    color: #00ff00; /* Verde terminal */
+    border: 1px solid #00ff00;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background: #2a75bb;
+    color: white;
+}
+
+.label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #fac800;
+}
+
+/* Input inferior */
+.input-container {
+    padding: 20px;
+    background: #333;
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    background: #1a1a1a;
+    border: 2px solid #555;
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+
+#send-btn {
+    background: #b00f0c;
+    color: white;
+    border: 3px solid #2a2a2a;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#send-btn:hover { background: #fac800; color: #2a2a2a; }
