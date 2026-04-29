@@ -10,6 +10,27 @@ let offset = 1;
 const limit = 20;
 let allPokemon = [];
 
+const typeIcons = {
+    fire: 'fa-fire',
+    water: 'fa-droplet',
+    grass: 'fa-leaf',
+    electric: 'fa-bolt',
+    psychic: 'fa-eye',
+    ice: 'fa-snowflake',
+    dragon: 'fa-dragon',
+    dark: 'fa-moon',
+    fairy: 'fa-wand-sparkles',
+    normal: 'fa-circle',
+    fighting: 'fa-hand-fist',
+    flying: 'fa-feather',
+    poison: 'fa-skull-crossbones',
+    ground: 'fa-mountain',
+    rock: 'fa-gem',
+    bug: 'fa-bug',
+    ghost: 'fa-ghost',
+    steel: 'fa-gear'
+};
+
 const typeColors = {
     fire: '#ff9c54', water: '#4e9aff', grass: '#78cd54', electric: '#f7d02c',
     psychic: '#ff5587', ice: '#96d9d6', dragon: '#6f35fc', dark: '#705746',
@@ -38,13 +59,19 @@ if (pokedex) {
         return await res.json();
     }
 
-    async function loadPokemonBatch() {
-        for (let i = offset; i < offset + limit; i++) {
-            const pokemon = await fetchPokemon(i);
-            allPokemon.push(pokemon);
+    async function loadPokemonBatch(){
+        //Evitar llamadas simultaneas si el usuario hace click rápido
+        loadMoreBtn.disabled = true;
+        for(let i = offset; i < offset + limit; i++) {
+            //Verificamos si el Id ya existe en AllPokemon para evitar duplicados
+            if(!allPokemon.find(p => p.id === i)) {
+                const pokemon = await fetchPokemon(i);
+                allPokemon.push(pokemon);
+    }
         }
         offset += limit;
         displayPokemon();
+        loadMoreBtn.disabled = false;
     }
 
     function displayPokemon() {
